@@ -173,6 +173,65 @@
     display:block;text-transform:uppercase;margin-top:2px;
   }
 
+  /* ============ READING SECTION ============ */
+  .reading{
+    margin-top:48px;padding-top:32px;
+    border-top:3px solid var(--ink);
+  }
+  .reading-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    flex-wrap:wrap;gap:16px;margin-bottom:18px;
+  }
+  .reading-title{
+    font-style:italic;font-weight:700;font-size:clamp(36px,4.5vw,56px);
+    letter-spacing:-.02em;line-height:1;margin:0;
+  }
+  .reading-sub{
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  }
+  .reading-list{
+    border-top:1px solid var(--ink);
+  }
+  .reading-item{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:24px;
+    padding:24px 0;
+    border-bottom:1px solid var(--ink);
+  }
+  @media (max-width:680px){
+    .reading-item{grid-template-columns:1fr;gap:8px}
+  }
+  .reading-byline{
+    font-family:Helvetica,Arial,sans-serif;
+    font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  .reading-byline strong{
+    display:block;color:var(--ink);font-size:11px;margin-bottom:4px;letter-spacing:.16em;
+  }
+  .reading-body h4{
+    margin:0 0 8px;
+    font-size:clamp(22px,2.2vw,28px);font-weight:700;
+    letter-spacing:-.01em;line-height:1.15;
+  }
+  .reading-body h4 a{color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;transition:border-color .15s ease}
+  .reading-body h4 a:hover{border-bottom-color:var(--pop)}
+  .reading-take{
+    font-size:15px;margin:0 0 14px;color:var(--ink);max-width:60ch;
+  }
+  .reading-cta{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:Helvetica,Arial,sans-serif;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+    color:var(--ink);text-decoration:none;
+    padding:6px 0;border-bottom:1px solid var(--ink);
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .reading-cta:hover{color:var(--pop);border-bottom-color:var(--pop)}
+  .reading-cta .arrow{transition:transform .15s ease}
+  .reading-cta:hover .arrow{transform:translateX(4px)}
+
   /* ============ SIGNOFF & ARCHIVE ============ */
   .signoff{margin-top:32px;font-style:italic;font-size:18px}
   .archive-head{
@@ -565,6 +624,53 @@
         </article>
 
       </div>
+
+      <!-- ============ READING (THINKPIECES) ============ -->
+      <section class="reading">
+        <div class="reading-head">
+          <h3 class="reading-title">Reading.</h3>
+          <span class="reading-sub">Three thinkpieces to chew on</span>
+        </div>
+        <div class="reading-list">
+
+          <article class="reading-item">
+            <div class="reading-byline">
+              <strong>Elizabeth Goodspeed</strong>
+              It's Nice That · Column · ~7 min
+            </div>
+            <div class="reading-body">
+              <h4><a href="https://www.itsnicethat.com/articles/elizabeth-goodspeed-on-analogue-creative-industry-290126" target="_blank" rel="noopener">"Faking 'realness' on a computer doesn't get us anywhere new"</a></h4>
+              <p class="reading-take">Goodspeed's column on imperfection-as-strategy — why the current rush toward "human" textures often produces the same flattened result as the AI work it claims to oppose. Useful armor when a client asks for "a little more handmade feel" and means a Photoshop noise filter.</p>
+              <a class="reading-cta" href="https://www.itsnicethat.com/articles/elizabeth-goodspeed-on-analogue-creative-industry-290126" target="_blank" rel="noopener">Read on It's Nice That <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="reading-item">
+            <div class="reading-byline">
+              <strong>Smith &amp; Diction</strong>
+              Medium · Studio Letter · ~12 min
+            </div>
+            <div class="reading-body">
+              <h4><a href="https://medium.com/smith-diction/2025-smith-diction-year-in-review-6ca53416cbe1" target="_blank" rel="noopener">2025 Year in Review — Turning Ten</a></h4>
+              <p class="reading-take">Mike and Chara Smith on what a decade of running an indie brand studio actually looks like — process, hires, the bets that worked. The kind of operational transparency most studios refuse to publish, and the reason their work has the through-line it does.</p>
+              <a class="reading-cta" href="https://medium.com/smith-diction/2025-smith-diction-year-in-review-6ca53416cbe1" target="_blank" rel="noopener">Read on Medium <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="reading-item">
+            <div class="reading-byline">
+              <strong>Creative Bloq</strong>
+              Editorial · Trend Essay · ~6 min
+            </div>
+            <div class="reading-body">
+              <h4><a href="https://www.creativebloq.com/design/graphic-design/texture-warmth-and-tactile-rebellion-the-big-graphic-design-trends-for-2026" target="_blank" rel="noopener">Texture, warmth and tactile rebellion: the big trends for 2026</a></h4>
+              <p class="reading-take">A field-survey of the broader "anti-AI craft" wave — collage, scan-marks, hand-set type — read alongside the actual industry numbers (47% of businesses are growing design budgets, not cutting them). Worth bookmarking for any client deck arguing AI hasn't replaced the discipline; the data backs it up.</p>
+              <a class="reading-cta" href="https://www.creativebloq.com/design/graphic-design/texture-warmth-and-tactile-rebellion-the-big-graphic-design-trends-for-2026" target="_blank" rel="noopener">Read on Creative Bloq <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+
+        </div>
+      </section>
 
       <p class="signoff">See you next Monday.</p>
     </section>
